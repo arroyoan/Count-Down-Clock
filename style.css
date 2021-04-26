@@ -1,0 +1,22 @@
+:root {
+  /* Primary Colors */
+  --gray-blue: hsl(237, 18%, 59%);
+  --soft-red: hsl(345, 95%, 68%);
+
+  /* Neutrals */
+  --White: hsl(0, 0%, 100%);
+  --drk-desat-blue: hsl(236, 21%, 26%);
+  --vdrk-blue: hsl(235, 16%, 14%);
+  --vdrk-blk-blue: hsl(234, 17%, 12%);
+
+  /* font */
+  --font: "Red Hat Text", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+}
