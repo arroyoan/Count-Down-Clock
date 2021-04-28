@@ -4,7 +4,7 @@
   --soft-red: hsl(345, 95%, 68%);
 
   /* Neutrals */
-  --White: hsl(0, 0%, 100%);
+  --white: hsl(0, 0%, 100%);
   --drk-desat-blue: hsl(236, 21%, 26%);
   --vdrk-blue: hsl(235, 16%, 14%);
   --vdrk-blk-blue: hsl(234, 17%, 12%);
@@ -19,4 +19,128 @@
 
 body {
   font-family: var(--font);
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.content__wrapper {
+  position: relative;
+  width: auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--vdrk-blk-blue);
+  background-image: url("/images/bg-stars.svg");
+}
+
+.header {
+  color: var(--white);
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 30px;
+}
+
+.clock {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.clock > * {
+  width: 100%;
+}
+
+.clock__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.counter__card {
+  background-image: linear-gradient(
+    to bottom,
+    hsl(236, 21%, 21%) 50%,
+    var(--drk-desat-blue) 50%
+  );
+  font-size: 32px;
+  color: var(--soft-red);
+  width: 100%;
+  text-align: center;
+  padding: 8px 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.counter__denom {
+  font-size: 10px;
+  color: var(--gray-blue);
+}
+
+.footer {
+  position: absolute;
+  bottom: 7%;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  z-index: 2;
+}
+
+.icon {
+  margin: 0px 20px;
+}
+
+.icon i {
+  font-size: 28px;
+  color: var(--gray-blue);
+}
+
+.icon i:hover,
+.icon i:focus {
+  color: var(--soft-red);
+}
+
+.mountains__container {
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+}
+
+.mountains {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  .clock {
+    width: 60%;
+  }
+
+  .counter__card {
+    max-width: 150px;
+    font-size: 72px;
+  }
+
+  /* .footer {
+    bottom: 5%;
+  } */
+
+  .mountains img {
+    width: 100%;
+  }
 }
