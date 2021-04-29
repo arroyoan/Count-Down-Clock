@@ -1,4 +1,6 @@
 const revealDate = new Date(2021,4,10,12,0,0);
+
+// get the elements by id
 const day = document.getElementById("day");
 const hour = document.getElementById("hour");
 const minute = document.getElementById("minute");
@@ -12,10 +14,7 @@ function setTime(){
   var currentTime = new Date();
   var elapsedTime = revealDate-currentTime;
   
-  console.log(elapsedTime);
-  //(Math.trunc(elapsedTime/1000))
   if( elapsedTime < 0){
-    console.log("here");
     clearInterval(countdown);
   }
 
@@ -38,6 +37,6 @@ function addZero(number){
   return number.toString();
 }
 
-// runs the js
-//
+// run setInterval so it will start counting down
+
 var countdown = setInterval(setTime,1000);
