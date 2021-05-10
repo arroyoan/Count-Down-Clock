@@ -1,4 +1,4 @@
-const revealDate = new Date(2021,4,10,12,0,0);
+const revealDate = new Date(2021,6,10,12,0,0);
 
 // get the elements by id
 const day = document.getElementById("day");
